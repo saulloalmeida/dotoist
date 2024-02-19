@@ -26,7 +26,9 @@ $login = function () {
 <div>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
-
+    @env('local')
+        <x-login-link email="saullo@teste.com"  />
+    @endenv
     <form wire:submit="login">
         <!-- Email Address -->
         <div>
