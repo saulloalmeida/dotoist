@@ -16,6 +16,7 @@ $store = function () {
     $validated = $this->validate();
     auth()->user()->tasks()->create($validated);
     $this->title = '';
+    $this->dispatch('task-created');
 };
 
 ?>
